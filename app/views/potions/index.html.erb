@@ -1,0 +1,17 @@
+<% @effects.each do |effect| %>
+	<% @howmany = 0 %>
+	<% @commoneffect = Array.new %>
+	<% @have.each do |have| %>
+		<% if have.effect1 == effect.effect || have.effect2 == effect.effect || have.effect3 == effect.effect || have.effect4 == effect.effect %>
+			<% @commoneffect << have.ingredient %>
+			<% @howmany += 1%>
+		<% end %>
+	<% end %>
+	<% if @howmany > 1%>
+		<%= raw "<b>" %><%= effect.effect %><%= ":" %><%= raw "</b>" %>
+		<% @commoneffect.each do |c| %>
+			<%= c %><%= raw "," %>
+		<% end %>
+		<%= raw "<br><br>" %>
+	<% end %>
+<% end %>

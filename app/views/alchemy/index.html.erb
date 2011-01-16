@@ -1,0 +1,15 @@
+<% form_tag '/potions' do %>
+<!-- 111 ingredients -->
+<table>
+	<tr>
+	<% @ingredient.each do |i| %>
+		<td><%= check_box_tag i.id %><%= i.ingredient %></td>
+		<% @inc = @inc + 1 %>
+		<% if @inc == 10 %>
+			<%= raw "</tr><tr>" %>
+			<% @inc = 0 %>
+		<% end %>
+	<% end %>
+</table>
+<%= submit_tag "What can I make with these ingredients?" %>
+<% end %>

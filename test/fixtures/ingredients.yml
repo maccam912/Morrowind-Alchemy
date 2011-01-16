@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ingredient: MyString
+  effect1: MyString
+  effect2: MyString
+  effect3: MyString
+  effect4: MyString
+
+two:
+  ingredient: MyString
+  effect1: MyString
+  effect2: MyString
+  effect3: MyString
+  effect4: MyString

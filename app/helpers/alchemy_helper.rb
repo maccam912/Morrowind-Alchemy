@@ -1,0 +1,2 @@
+module AlchemyHelper
+end
