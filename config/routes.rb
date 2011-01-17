@@ -1,6 +1,7 @@
 Morrowindalchemy::Application.routes.draw do
   
   match "potions" => "potions#index"
+  match "alchemy" => "alchemy#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

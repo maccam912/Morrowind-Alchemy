@@ -1,3 +1,4 @@
+<% @totaleffects = 0 %>
 <% @effects.each do |effect| %>
 	<% @howmany = 0 %>
 	<% @commoneffect = Array.new %>
@@ -11,7 +12,12 @@
 		<%= raw "<b>" %><%= effect.effect %><%= ":" %><%= raw "</b>" %>
 		<% @commoneffect.each do |c| %>
 			<%= c %><%= raw "," %>
+			<% @totaleffects = 1 %>
 		<% end %>
 		<%= raw "<br><br>" %>
 	<% end %>
 <% end %>
+<% if @totaleffects == 0 %>
+	<%= raw "<b>These ingredients don't have any common effects.</b>"%>
+<% end %>
+<%= raw "<br><A HREF='javascript:history.go(-1)'> [Go Back]</A>"%>
